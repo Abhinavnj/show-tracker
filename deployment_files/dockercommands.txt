@@ -1,0 +1,5 @@
+-- vi /private/etc/hosts 192.168.99.101 showtracker.com
+--Create repository on docker hub abhinavsirohi/showtrackerapi:1.0.0.1
+docker build --pull --rm -f "webapi/Dockerfile" -t showtrackerapi:1.0.0.1 "webapi"
+docker tag showtackerapi:1.0.0.1 abhinavsirohi/showtrackerapi:1.0.0.1
+docker push abhinavsirohi/showtrackerapi:1.0.0.1

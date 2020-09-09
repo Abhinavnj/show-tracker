@@ -1,0 +1,20 @@
+kubectl run -it --rm --image=mysql:5.6 --restart=Never mysql-client -- mysql -h mysql -ppassword
+SHOW DATABASES;
+CREATE DATABASE series;
+use series;
+CREATE TABLE shows
+(
+  id              INT unsigned NOT NULL AUTO_INCREMENT, # Unique ID for the record
+  name            VARCHAR(150) NOT NULL,                # Name of the Show
+  Season           INT NOT NULL,                # Season of the Show
+  Episode          INT NOT NULL,                        # Episode number of Show
+  SeriesTime       TIME NOT NULL,                        # Time of the SHOW
+  PRIMARY KEY     (id)                                  # Make the id the primary key
+);
+SHOW TABLES;
+DESCRIBE SHOWS;
+INSERT INTO shows ( name, Season, Episode,SeriesTime) VALUES
+  ( 'Bosch', 1, 6,'00:15:10' ),
+  ( 'Flash',4,4, '00:14:00' ),
+  ( 'Eureka', 3,5, '00:10:10' );
+Select * from shows;

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: showstracker-api-deployment
+  labels:
+    app: showstrackerapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: showstrackerapi
+  template:
+    metadata:
+      labels:
+        app: showstrackerapi
+    spec:
+      containers:
+      - name: showstrackerapi
+        image: abhinavsirohi/showtrackerapi:1.0.0.0
+        ports:
+        - containerPort: 80

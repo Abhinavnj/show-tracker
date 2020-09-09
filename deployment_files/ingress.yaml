@@ -1,0 +1,14 @@
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
+  name: showtrackerapi-ingress
+  namespace: default
+spec:
+  rules:
+    - host: showtracker.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: showstrackerapi-service
+              servicePort: 80
