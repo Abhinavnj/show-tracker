@@ -18,3 +18,11 @@ INSERT INTO shows ( name, Season, Episode,SeriesTime) VALUES
   ( 'Flash',4,4, '00:14:00' ),
   ( 'Eureka', 3,5, '00:10:10' );
 Select * from shows;
+CREATE TABLE accounts
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id)
+);

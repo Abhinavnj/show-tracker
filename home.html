@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Show Tracker</title>
+		<style>
+		.displayShows {
+			width: 200px;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			font-size: 16px;
+			color: #ffffff;
+		}
+
+		.addShow {
+			width: 200px;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			font-size: 16px;
+			color: #ffffff;
+		}
+		</style>
+	</head>
+	<body>
+        <form action="shows" method="get">
+            <input hidden type="text"><br><br>
+            <button class="displayShows" type="submit" formaction="shows">Get shows</button>
+        </form>
+        <br>
+        <button class="addShow" onclick="location.href='showform';">Add a show</button>
+	</body>
+</html>
